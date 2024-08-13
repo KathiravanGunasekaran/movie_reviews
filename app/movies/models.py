@@ -8,7 +8,7 @@ class Movie(base):
     __tablename = "movies"
 
     id = Column(Integer, primary_key=True, nullable=False)
-    movie_title = Column(String, nullable=False, unique=True)
+    title = Column(String, nullable=False, unique=True)
     review = Column(String, nullable=False)
     rating = Column(Integer, default=0)
     created_at = Column(TIMESTAMP(timezone=True), nullable=False, server_default=text('NOW()'))
